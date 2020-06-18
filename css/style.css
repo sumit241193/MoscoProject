@@ -54,6 +54,12 @@ h3 {
 }
 
 
+.content-title-white h3
+{
+    color:#fff;
+}
+
+
 /* to use class we will prefix '.' followed by class name */
 
 .btn-general {
@@ -300,4 +306,84 @@ h4.team-member-designation
 {
     color:#34c6d3;
 }
+
+
+/* Testimonial */
+
+#testimonials-cover
+{
+    background-image: url("../img/bg-testimonials.jpg");
+}
+
+#testimonials .content-box
+{
+    background-color:rgba(0,0,0,0.1);
+}
+
+#customers-testimonials
+{
+    padding:50px 0;
+}
+
+.testimonial img{
+    max-width: 120px;
+    margin:0 auto 0 auto;
+    border-radius:60%;
+}
+
+
+.testimonial blockquote
+{
+    font-family: Georgia,sans-serif;
+    border:0;
+    font-style: italic;
+    color:#fff;
+    padding:6px 150px;
+    position: relative;
+}
+
+.testimonial blockquote p{
+    color:#fff;
+}
+
+.testimonial blockquote::before
+{
+    content:"\201C";
+    top:0;
+    left:100px;
+}
+
+.testimonial blockquote::after
+{
+    content:"\201D";
+
+    bottom:0;
+    right:100px;
+}
+
+.testimonial blockquote::before,.testimonial blockquote::after
+{
+    font-size:80px;
+    font-style:normal;
+    line-height: 1px;
+    width:30px;
+    height:30px;
+
+    position:absolute;
+
+
+}
+
+.testimonial-author p
+{
+    color:#fff;
+    font-size: 17px;
+}
+
+.testimonial-author p strong{
+    display: block;
+}
+
+
+
 
