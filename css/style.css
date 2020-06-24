@@ -508,3 +508,10 @@ ul.pricing-spec li p
     transform: scale(1.5);
     transition: ease-in-out .5s;
 }
+
+/* Client Section */
+
+.client
+{
+    padding:40px 0;
+}
