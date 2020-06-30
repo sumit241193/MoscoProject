@@ -930,15 +930,15 @@
 						<div class="col-md-6">
 							<div id="contact-right">
 								<h3>Contact us</h3>
-								<form action="#">
-									<input type="text" name="full-name" placeholder="Enter FullName" class="form-control">
-									<input type="text" name="Email" placeholder="Enter email" class="form-control">
+								<form action="contactdb.php" method="POST" id="my_form" onsubmit="submitmyform();">
+									<input type="text" name="name" placeholder="Enter FullName" class="form-control">
+									<input type="text" name="email" placeholder="Enter email" class="form-control">
 
 									<textarea name="message"  rows="5" class="form-control"></textarea>
 
 									<div id="send-btn">
-										<a href="#" class="btn btn-lg btn-general btn-white" role="button">Send</a>
-
+										<button type="submit" class="btn btn-lg btn-general btn-white" role="button">Send</button>
+										<p id="msg-response"></p>
 									</div>
 
 
@@ -1006,6 +1006,45 @@
 	<script src="js/Counter/jquery.waypoints.js"></script>
 
 	<script src="js/script.js"></script>
+
+		<script>
+			$(function submitMyform(){
+
+				$("#my_form").submit(function(e){
+					e.preventDefault();
+
+					var form=$(this);
+					var url=form.attr('action');
+
+					$.ajax({
+
+						type:'POST',
+						url:url,
+						data:form.serialize(),
+						success:function(data)
+						{
+							$("#msg-response").html(data);
+							$("my_form").each(function(){
+								this.reset();
+							});
+						}
+
+
+
+
+					});
+				});
+
+
+
+			})
+
+
+
+
+
+		</script>
+
 </body>
 
 </html>
